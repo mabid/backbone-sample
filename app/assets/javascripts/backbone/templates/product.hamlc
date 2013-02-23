@@ -1,0 +1,9 @@
+%td="#{@product.get('name')}"
+%td="#{@product.get('price')}"
+%td="#{@product.get('product_type')}"
+%td{style:"width:20%"}
+  %a.btn.edit.btn-success
+    Edit
+  %nbsp
+  %a.btn.delete.btn-danger
+    Delete

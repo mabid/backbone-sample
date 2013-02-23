@@ -1,0 +1,11 @@
+%td
+  %input#name{type:"text",value:"#{@product.get('name')}"}
+%td
+  %input#price{type:"text",value:"#{@product.get('price')}"}
+%td
+  %input#product_type{type:"text",value:"#{@product.get('product_type')}"}
+%td{style:"width:20%;"}
+  %a.save.btn.btn-primary
+    Save
+  %a.cancel.btn
+    Cancel

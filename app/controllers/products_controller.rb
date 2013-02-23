@@ -28,9 +28,9 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update_attributes(params[:frontend])
-      respond_width(nothing: true, status: :ok)
+      respond_with(nothing: true, status: :ok)
     else
-      respond_width(@product.errors, status: :unprocessable_entity)
+      respond_with(@product.errors, status: :unprocessable_entity)
     end
   end
 
@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.destroy
-      respond_width(nothing: true, status: :ok)
+      respond_with(nothing: true, status: :ok)
     else
       respond_with(nothing: true, status: :forbidden)
     end

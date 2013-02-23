@@ -1,6 +1,12 @@
-class FrontendDeveloperTest.Models.Product extends Backbone.Model
-  paramRoot: 'product'
+class FrontendDeveloperTest.Models.Frontend extends Backbone.Model
+  paramRoot: 'frontend'
 
-class FrontendDeveloperTest.Collections.ProductsCollection extends Backbone.Collection
-  model: FrontendDeveloperTest.Models.Product
-  url: '/products'
+  toJSON: ->
+    attrs = _(@attributes).clone()
+    delete attrs.created_at
+    delete attrs.updated_at
+    attrs
+
+class FrontendDeveloperTest.Collections.FrontendsCollction extends Backbone.Collection
+  model: FrontendDeveloperTest.Models.Frontend
+  url: '/api/products'

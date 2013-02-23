@@ -9,3 +9,10 @@ window.FrontendDeveloperTest =
   Collections: {}
   Routers: {}
   Views: {}
+  initialize: ->
+    @products = new FrontendDeveloperTest.Collections.FrontendsCollction(products)
+    @app = new FrontendDeveloperTest.Routers.AppsRouter
+    Backbone.history.start()
+
+$(document).bind "ready", ->
+  FrontendDeveloperTest.initialize()

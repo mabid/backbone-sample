@@ -1,0 +1,19 @@
+%h1 Products List
+.row
+  %input#name{type:"text", placeholder:"name"}
+  %input#product_type{type:"text", placeholder:"type"}
+  %input#price{type:"text", placeholder:"price"}
+  %a#add.btn.btn-primary{style:"margin-bottom:10px;"} Add
+.row
+  %table.table.table-stripped.table-bordered.table-hover
+    %thead
+      %tr
+        %th
+          Name
+        %th
+          Price
+        %th 
+          Type
+        %th 
+          Actions
+    %tbody
